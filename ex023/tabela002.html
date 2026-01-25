@@ -13,6 +13,13 @@
             width: 500px;
             border-collapse: collapse;
         }
+        
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
 
         td, th {
             border: 1px solid black;
@@ -23,6 +30,17 @@
             background-color: gray;
             color: white;
         }
+        
+        /* isso é pra linhda principal o titulo ficar fixo quando rolar a tabela e for muito grande, lembrando que teria que jogar um postion:relative no table.
+        thead > tr > th {
+            position:sticky
+            top: 0px;
+            background-color: lightgrey;
+        }*/
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        } /* esse nth é pra deixar a tabela zebrada, e tem a opçao tbm de de ao inves de usar 2n usar ou even q é par ou odd q é impar*/
 
         td.num {
             text-align: right;
@@ -36,18 +54,23 @@
     <!--
     Anatomia para tabelas grandes
     table
+    caption
     thead
      tr, td, th
     tbody
          tr, td, th
     tfoot
          tr, td, th
+         th = título
+         td = dados
+         
          -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
 
         </thead>
@@ -67,8 +90,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td class="num">0000</td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num">84 352 783</td>
             </tr>
         </tfoot>
     </table>
