@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    }
+
+div#formulario {
+    border: 1px solid black;
+    width: 60vw;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#imagem {
+    border: 1px solid black;
+    width: 60vw;
+    height: 200px;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+    margin: auto;
+    margin-top: 100px;
+    background-image: url(../imagens/predio-imagem.jpg);
+    background-position: center bottom;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 5px;
+}
